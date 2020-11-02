@@ -2,7 +2,6 @@ variable "log_analytics_workspace_id" {
   description = "(Required) contains the log analytics workspace ID details for operations diagnostics."
 }
 
-
 variable "resource_name" {
   description = "(Required) Name of the diagnostics object."
 }
@@ -10,7 +9,6 @@ variable "resource_name" {
 variable "resource_id" {
   description = "(Required) Fully qualified Azure resource identifier for which you enable diagnostics."
 }
-
 
 variable "diag_object" {
   description = "(Required) Contains the diagnostics setting object."
@@ -31,7 +29,7 @@ variable "diag_object" {
 #         ]
 #     metric = [
 #                 #["Category name",  "Diagnostics Enabled(true/false)", "Retention Enabled(true/false)", Retention_period]                 
-#["AllMetrics", 60, True],
+#                 ["AllMetrics", true, true, 60],
 #     ]
 # }
 
