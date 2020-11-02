@@ -2,7 +2,7 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostics" {
   name                           = "${var.resource_name}-diag"
   target_resource_id             = var.resource_id
   log_analytics_workspace_id     = var.log_analytics_workspace_id
-  log_analytics_destination_type = lookup(var.diag_object, "log_analytics_destination_type", Dedicated)
+  log_analytics_destination_type = lookup(var.diag_object, "log_analytics_destination_type", "Dedicated")
 
   dynamic "log" {
     for_each = var.diag_object.log
